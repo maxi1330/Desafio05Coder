@@ -1,0 +1,19 @@
+<ul>
+    <% if(productos.length > 0){ %>
+        <% for (const producto of productos) {%>
+            <tr>
+                <td><%=producto.id %></td>
+                <td><%=producto.title %></td>
+                <td><%=producto.price %></td>
+                <td><img src="<%=producto.thumbnail %>" height="150px" width="200px" alt="Imagen no disponible"></td>
+            </tr>
+        <% } %>
+    <% } else { %>
+        <tr>
+            <td>No hay productos</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    <% } %>
+</ul>

@@ -1,0 +1,10 @@
+extends layout
+
+block listadoProductos
+        each producto in productos
+            tr
+                td #{producto.id}
+                td #{producto.title}
+                td #{producto.price}
+                td
+                    img(src=`#{producto.thumbnail}`, alt='Imagen no disponible', width='200px')

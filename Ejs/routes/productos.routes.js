@@ -4,7 +4,11 @@ const routerProductos = express.Router();
 let DB_PRODUCTOS = [];
 
 routerProductos.get('/productos', (req, res)=>{
-    return res.render('main', {productos: DB_PRODUCTOS});
+    return res.render('listado', {productos: DB_PRODUCTOS});
+});
+
+routerProductos.get('/', (req, res)=>{
+    return res.render('carga');
 });
 
 routerProductos.post('/productos', (req, res)=>{

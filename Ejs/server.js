@@ -9,7 +9,6 @@ const routerProductos = require('./routes/productos.routes');
 /* ---------------------- Middlewares ---------------------- */
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use(express.static(__dirname + '/public'));
 
 //Motor de Plantillas
 app.set('views', './views');

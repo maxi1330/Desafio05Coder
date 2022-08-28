@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title Desafio 04 - Coderhouse
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' integrity='sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l' crossorigin='anonymous')
+    body
+        .container.mt-3
+            .jumbotron
+                h1(style='color:blue;') Ingrese un producto
+                br
+                form(action='/productos' method='post')
+                    .form-group
+                        label(for='titulo')
+                            b Titulo
+                        input#titulo.form-control(type='text' name='title' placeholder='Ingrese un titulo')
+                    .form-group
+                        label(for='precio')
+                            b Precio
+                        input#precio.form-control(type='number' name='price' placeholder='Ingrese un precio')
+                    .form-group
+                        label(for='imagen')
+                            b Imagen
+                        input#imagen.form-control(type='text' name='thumbnail' placeholder='Url de imagen')
+                    button.btn.btn-primary.mt-3.mb-5 GUARDAR PRODUCTO
+                    button.btn.btn-secunday.mt-3.mb-5
+                        a(href='/productos') VER PRODUCTOS

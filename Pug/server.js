@@ -8,7 +8,6 @@ const routerProductos = require('./routes/productos.routes');
 /* ---------------------- Middlewares ---------------------- */
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use(express.static(__dirname + '/public'));
 
 //Motores de plantilla
 app.set('views', './views');

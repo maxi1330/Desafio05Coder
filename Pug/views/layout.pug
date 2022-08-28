@@ -1,17 +1,24 @@
 doctype html
-html(lang="en")
+html(lang='en')
     head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Desafio05Coder
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title HBS - Listado de productos
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' integrity='sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l' crossorigin='anonymous')
     body
-        a(href='/') Ingresar producto
-        table
-            tr
-                th Id
-                th Titulo
-                th Precio
-                th Imagen
-            tbody
-                block listadoProductos
+        .container.mt-3
+            .jumbotron
+                h2(style='color:blue;') Listado de productos
+                button.btn.btn-secundary.mt-3.mb-5
+                    a(href='/') Ingresar un producto
+                br
+                .table-responsive
+                    table.table.table-dark
+                        tbody
+                            tr(style='color: yellow;')
+                                th ID
+                                th Titulo
+                                th Precio
+                                th Imagen
+                        block listadoProductos

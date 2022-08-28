@@ -7,6 +7,10 @@ routerProductos.get('/productos', (req, res)=>{
     return res.render('listadoProductos', {productos: DB_PRODUCTOS});
 });
 
+routerProductos.get('/', (req, res)=>{
+    return res.render('carga');
+});
+
 routerProductos.post('/productos', (req, res)=>{
     let {title, price, thumbnail} = req.body;
     if(!title || !price || !thumbnail){

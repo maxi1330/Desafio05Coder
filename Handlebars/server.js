@@ -10,13 +10,12 @@ const routerProductos = require('./routes/productos.routes');
 /* ---------------------- Middlewares ---------------------- */
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use(express.static(__dirname + '/public'));
 
 //Motor de Plantillas
 app.set('views', path.join(__dirname, 'views'));
 app.engine('hbs', exphbs.engine({
     defaultLayout: 'main',
-    layoutsDir: path.join(app.get('views'), 'partials'),
+    layoutsDir: path.join(app.get('views'), 'layouts'),
     extname: 'hbs'
 }));
 app.set('view engine', 'hbs');
